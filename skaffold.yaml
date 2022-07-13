@@ -4,10 +4,11 @@ metadata:
   name: leeroy-web
 build:
   artifacts:
-  - image: leeroy-web
+  - image: us-central1-docker.pkg.dev/cloud-deploy-fyndna/docker-registry/leeroy-web
     docker:
       dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
     - kubernetes/deployment.yaml
+    - kubernetes/service.yaml
